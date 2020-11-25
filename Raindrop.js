@@ -5,7 +5,7 @@ class Raindrop{
             friction:0.5,
             density:1.15,
         }
-        this.body = Bodies.rectangle(x, y,2,5,options);
+        this.body = Bodies.circle(x, y,5,options);
         
         World.add(world, this.body);
     }
@@ -13,9 +13,9 @@ class Raindrop{
     var pos = this.body.position;
           push();
           translate(pos.x, pos.y);
-          stroke("black");
-          fill("white");
-          rect(0,0,this.width,this.height);
+          stroke("blue");
+          fill("lightBlue");
+          ellipse(0,0,5,5);
           pop();
     }
     }
